@@ -92,7 +92,7 @@ class ActionButton extends StatelessWidget {
             ),
             child: child ??
                 Text(
-                  text ?? "Sign in",
+                  text,
                   style: TextStyle(
                       color: textColor ?? Colors.red,
                       fontWeight: fontWight ?? FontWeight.normal,

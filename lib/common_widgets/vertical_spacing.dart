@@ -5,7 +5,7 @@ class VerticalSpacing extends StatelessWidget {
   final double spacing;
   final double? width;
 
-  const VerticalSpacing(this.spacing, {this.width , Key?key}):super(key: key);
+  const VerticalSpacing(this.spacing, {this.width, Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

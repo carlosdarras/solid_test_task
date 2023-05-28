@@ -1,7 +1,7 @@
 import 'dart:math' as math;
-import 'package:solid_task/first_way/first_way_content.dart';
+import 'package:solid_task/first_way/view/first_way_content.dart';
 import 'package:solid_task/home/home_barrel.dart';
-import 'package:solid_task/third_way/third_way_content.dart';
+import 'package:solid_task/third_way/view/third_way_content.dart';
 
 part 'background_color_event.dart';
 
@@ -9,6 +9,14 @@ part 'background_color_state.dart';
 
 class BackgroundColorBloc
     extends Bloc<BackgroundColorEvent, BackgroundColorState> {
+  BackgroundColorBloc() : super(BackgroundColorInitial()) {
+    on<ChangeBackgroundColorRandomly>(_onChangeBackgroundColorRandomly);
+    on<ChangeBackgroundColorRandomlyByUsingFixedList>(
+        _onChangeBackgroundColorRandomlyByUsingFixedList);
+    on<ChangeBackgroundColorRandomlyByUsingRGB>(
+        _onChangeBackgroundColorRandomlyByUsingRGB);
+  }
+
   ///======== [VARIABLES] ========\\\
   final math.Random random = math.Random();
 
@@ -28,14 +36,6 @@ class BackgroundColorBloc
   int backgroundColorIndex = 0;
 
   Color color = const Color(0xFFFFFFFF);
-
-  BackgroundColorBloc() : super(BackgroundColorInitial()) {
-    on<ChangeBackgroundColorRandomly>(_onChangeBackgroundColorRandomly);
-    on<ChangeBackgroundColorRandomlyByUsingFixedList>(
-        _onChangeBackgroundColorRandomlyByUsingFixedList);
-    on<ChangeBackgroundColorRandomlyByUsingRGB>(
-        _onChangeBackgroundColorRandomlyByUsingRGB);
-  }
 
   ///======== [EVENT_HANDLING] ========\\\
 
@@ -82,11 +82,11 @@ class BackgroundColorBloc
     Emitter emit,
   ) {
     try {
-      color = Color.fromARGB(
+      color = Color.fromRGBO(
         random.nextInt(256),
         random.nextInt(256),
         random.nextInt(256),
-        random.nextInt(256),
+        1,
       );
       emit(ChangeBackgroundColorUsingRGBSuccessState());
     } catch (e) {

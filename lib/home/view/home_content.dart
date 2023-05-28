@@ -1,11 +1,7 @@
-import 'package:flutter/material.dart';
-import 'package:sizer/sizer.dart';
-import 'package:solid_task/common_widgets/acrion_button.dart';
-import 'package:solid_task/common_widgets/vertical_spacing.dart';
-import 'package:solid_task/first_way/first_way_view.dart';
-import 'package:solid_task/third_way/third_way_view.dart';
-import '../../common_widgets/navigate.dart';
-import '../../second_way/second_way_view.dart';
+import 'package:solid_task/first_way/view/first_way_view.dart';
+import 'package:solid_task/third_way/view/third_way_view.dart';
+import '../../second_way/view/second_way_view.dart';
+import '../home_barrel.dart';
 
 class HomeContent extends StatelessWidget {
   const HomeContent({Key? key}) : super(key: key);
@@ -16,31 +12,43 @@ class HomeContent extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(
-            "SOLID Software Company\nTask",
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15.sp),
-            textAlign: TextAlign.center,
+          Animate(
+            effects: const [FadeEffect(), MoveEffect()],
+            child: Text(
+              "SOLID Software Company\nTask",
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15.sp),
+              textAlign: TextAlign.center,
+            ),
           ),
           const VerticalSpacing(2),
-          ActionButton(
-            onPressed: () {
-              navigateTo(context, const FirstWayView());
-            },
-            text: "First way",
+          Animate(
+            effects: [FadeEffect(delay: 200.ms), MoveEffect(delay: 200.ms)],
+            child: ActionButton(
+              onPressed: () {
+                navigateTo(context, const FirstWayView());
+              },
+              text: "Randomly Hex Dec",
+            ),
           ),
           const VerticalSpacing(2),
-          ActionButton(
-            onPressed: () {
-              navigateTo(context, const SecondWayView());
-            },
-            text: "Second way",
+          Animate(
+            effects: [FadeEffect(delay: 300.ms), MoveEffect(delay: 300.ms)],
+            child: ActionButton(
+              onPressed: () {
+                navigateTo(context, const SecondWayView());
+              },
+              text: "Fixed List Of Color",
+            ),
           ),
           const VerticalSpacing(2),
-          ActionButton(
-            onPressed: () {
-              navigateTo(context, const ThirdWayView());
-            },
-            text: "Third way",
+          Animate(
+            effects: [FadeEffect(delay: 400.ms), MoveEffect(delay: 400.ms)],
+            child: ActionButton(
+              onPressed: () {
+                navigateTo(context, const ThirdWayView());
+              },
+              text: "RGBA",
+            ),
           ),
         ],
       ),

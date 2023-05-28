@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
-
 import 'package:solid_task/home/view/home_view.dart';
 
 class App extends StatelessWidget {

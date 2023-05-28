@@ -1,6 +1,4 @@
-import 'package:solid_task/home/bloc/background_color_bloc/background_color_bloc.dart';
-import 'package:solid_task/home/home_barrel.dart';
-import 'first_way_content.dart';
+import 'package:solid_task/first_way/first_way_barrel.dart';
 
 class FirstWayView extends StatelessWidget {
   const FirstWayView({Key? key}) : super(key: key);

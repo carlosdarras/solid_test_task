@@ -1,8 +1,4 @@
-
-
 import 'package:solid_task/home/home_barrel.dart';
-
-import '../bloc/background_color_bloc/background_color_bloc.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({Key? key}) : super(key: key);
@@ -10,10 +6,9 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => BackgroundColorBloc(),
-      child: const Scaffold(
-        body: HomeContent(),
-      )
-    );
+        create: (context) => BackgroundColorBloc(),
+        child: const Scaffold(
+          body: HomeContent(),
+        ));
   }
 }
