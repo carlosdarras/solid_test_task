@@ -1,7 +1,5 @@
 import 'dart:math' as math;
-import 'package:solid_task/first_way/view/first_way_content.dart';
-import 'package:solid_task/home/home_barrel.dart';
-import 'package:solid_task/third_way/view/third_way_content.dart';
+import 'package:solid_task/view/screens/home/home_barrel.dart';
 
 part 'background_color_event.dart';
 

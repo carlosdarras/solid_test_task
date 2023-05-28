@@ -1,9 +1,0 @@
-export 'package:flutter/material.dart';
-export 'package:flutter_bloc/flutter_bloc.dart';
-export 'package:sizer/sizer.dart';
-export 'package:solid_task/home/view/home_content.dart';
-export 'package:flutter_animate/flutter_animate.dart';
-export 'package:solid_task/common_widgets/action_button.dart';
-export 'package:solid_task/common_widgets/vertical_spacing.dart';
-export 'package:solid_task/common_widgets/navigate.dart';
-export 'package:solid_task/home/bloc/background_color_bloc/background_color_bloc.dart';

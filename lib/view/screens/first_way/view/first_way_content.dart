@@ -1,4 +1,5 @@
-import 'package:solid_task/first_way/first_way_barrel.dart';
+import '../../../common_widgets/background_changes_button.dart';
+import '../../home/home_barrel.dart';
 
 class FirstWayContent extends StatelessWidget {
   const FirstWayContent({Key? key}) : super(key: key);

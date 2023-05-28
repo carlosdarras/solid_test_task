@@ -1,6 +1,9 @@
-import 'package:solid_task/first_way/view/first_way_view.dart';
-import 'package:solid_task/third_way/view/third_way_view.dart';
-import '../../second_way/view/second_way_view.dart';
+
+
+import 'package:solid_task/view/screens/first_way/view/first_way_view.dart';
+import 'package:solid_task/view/screens/second_way/view/second_way_view.dart';
+import 'package:solid_task/view/screens/third_way/view/third_way_view.dart';
+
 import '../home_barrel.dart';
 
 class HomeContent extends StatelessWidget {

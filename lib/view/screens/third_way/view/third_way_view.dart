@@ -1,7 +1,11 @@
-import 'package:solid_task/first_way/first_way_barrel.dart';
 
-class FirstWayView extends StatelessWidget {
-  const FirstWayView({Key? key}) : super(key: key);
+
+
+
+import '../third_way_barrel.dart';
+
+class ThirdWayView extends StatelessWidget {
+  const ThirdWayView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -9,8 +13,8 @@ class FirstWayView extends StatelessWidget {
       builder: (context, state) {
         var bloc = context.read<BackgroundColorBloc>();
         return Scaffold(
-          backgroundColor: bloc.backgroundColor,
-          body: const FirstWayContent(),
+          backgroundColor: bloc.color,
+          body: const ThirdWayContent(),
         );
       },
     );

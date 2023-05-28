@@ -1,4 +1,4 @@
-import 'package:solid_task/home/home_barrel.dart';
+import 'package:solid_task/view/screens/home/home_barrel.dart';
 
 void navigateTo(BuildContext context, Widget widget) => Navigator.push(
       context,
